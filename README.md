@@ -1,4 +1,4 @@
-# grunt-scaffold-stylebench
+# grunt-template-stylebench
 
 > Creates a [grunt-init][] project for scaffolding out a baseline project for quickly producing web ui prototypes.  However, the modular structure allows for scaling to a full maintainable pattern library.
 
@@ -31,7 +31,7 @@ If you haven't already done so, install [grunt-init][].
 Once grunt-init is installed, place this template in your `~/.grunt-init/` directory. It's recommended that you use git to clone this template into that directory, as follows:
 
 ```
-git clone git@github.com:RussMartinez/grunt-scaffold-stylebench.git
+git clone git@github.com:RussMartinez/grunt-template-stylebench.git
 ~/.grunt-init/stylebench
 ```
 
