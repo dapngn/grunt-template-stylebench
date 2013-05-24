@@ -6,11 +6,14 @@
 - [SMACSS](http://smacss.com/) influenced source file layout
 - Plugin-less [LiveReload](http://livereload.com/) action 
 - [SASS](http://sass-lang.com/), [Compass](http://compass-style.org/), and [Jade](http://jade-lang.com/)
+- [require.js](http://requirejs.org/) integration 
 - By leveraging Grunt and co, it is completely __Editor Agnostic__
 
 ## What is coming?
-- [require.js](http://requirejs.org/) integration 
+- qunit integration 
+- Separate theme files
 - Continue promoting [SMACSS](http://smacss.com/) and [OOCSS](http://oocss.org/) in placeholder assets and comments
+- auto generated documentation?
 
 ## What technologies are under the hood?
 - [grunt-init][]
