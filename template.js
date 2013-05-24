@@ -49,7 +49,8 @@ exports.template = function(grunt, init, done) {
 				'grunt-regarde': '~0.1.1',
 				'grunt-contrib-connect': '~0.3.0',
 				'grunt-contrib-livereload': '~0.1.2',
-				'grunt-contrib-jade': '~0.6.0'
+				'grunt-contrib-jade': '~0.6.0',
+				'grunt-contrib-copy': '~0.4.1'
 			}
 		});
 

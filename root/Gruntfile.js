@@ -22,6 +22,15 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		copy: {
+			js: {
+				files: [
+					{expand: true, cwd: 'src', src: ['index.js'], dest: 'www/'},
+					{expand: true, flatten: true, cwd: 'src/jslib', src: ['**/*.js'], dest: 'www/js'},
+					{expand: true, flatten: true, cwd: 'src/module', src: ['**/*.js'], dest: 'www/js'}
+				]
+			}
+		},
 		jade: {
 			compile: {
 				options: {
@@ -43,7 +52,6 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		// Configuration to be run (and then tested)
 		regarde: {
 			jade: {
 				files: 'src/**/*.jade',
@@ -52,6 +60,10 @@ module.exports = function(grunt) {
 			scss: {
 				files: 'src/**/*.scss',
 				tasks: ['compass']
+			},
+			js: {
+				files: 'src/**/*.js',
+				tasks: ['copy:js','livereload']
 			},
 			html: {
 				files: 'www/**/*.html',
@@ -66,10 +78,11 @@ module.exports = function(grunt) {
 	});
 
 	grunt.loadNpmTasks('grunt-regarde');
+	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-jade');
+	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-livereload');
-	grunt.loadNpmTasks('grunt-contrib-compass');
-	grunt.loadNpmTasks('grunt-contrib-jade');
 
 	grunt.registerTask('default', ['livereload-start', 'connect', 'regarde']);
 };
