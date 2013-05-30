@@ -15,6 +15,7 @@ module.exports = function(grunt) {
 		connect: {
 			livereload: {
 				options: {
+					hostname: '*',
 					port: 9001,
 					middleware: function(connect, options) {
 						return [lrSnippet, folderMount(connect, options.base)]
